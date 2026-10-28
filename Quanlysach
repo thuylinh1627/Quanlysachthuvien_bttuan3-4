@@ -1,0 +1,47 @@
+
+#include <stdio.h>
+
+int main()
+{
+    char maSach[20];
+    char tenSach[100];
+    char tacGia[100];
+    int namXuatBan;
+    float donGia, thanhTien, phiVanChuyen, tongTien;
+    int soLuong;
+    printf("Nhap ma sach: ");
+    scanf("%s", maSach);
+
+    printf("Nhap ten sach: ");
+    scanf(" %[^\n]", tenSach);
+
+    printf("Nhap tac gia: ");
+    scanf(" %[^\n]", tacGia);
+
+    printf("Nhap nam xuat ban: ");
+    scanf("%d", &namXuatBan);
+
+    printf("Nhap don gia: ");
+    scanf("%f", &donGia);
+
+    printf("Nhap so luong: ");
+    scanf("%d", &soLuong);
+    thanhTien = donGia * soLuong;
+    phiVanChuyen = thanhTien * 0.05;
+    tongTien = thanhTien + phiVanChuyen;
+
+    // Hien thi thong tin sach
+    printf("\n===== THONG TIN SACH =====\n");
+    printf("Ma sach: %s\n", maSach);
+    printf("Ten sach: %s\n", tenSach);
+    printf("Tac gia: %s\n", tacGia);
+    printf("Nam xuat ban: %d\n", namXuatBan);
+    printf("Don gia: %.2f VND\n", donGia);
+    printf("So luong: %d\n", soLuong);
+
+    printf("Thanh tien: %.2f VND\n", thanhTien);
+    printf("Phi van chuyen: %.2f VND\n", phiVanChuyen);
+    printf("Tong tien nhap: %.2f VND\n", tongTien);
+
+    return 0;
+}
